@@ -182,7 +182,7 @@ const Gallery = () => {
               actionIcon={
                 <Link to={item.url}>
                   <IconButton
-                    sx={{ color: colors.teal[100] }}
+                    sx={{ color: colors.lightBlue[100] }}
                     aria-label={`info about ${item.title}`}
                   >
                     <InfoIcon />

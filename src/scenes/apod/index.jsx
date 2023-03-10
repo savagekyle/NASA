@@ -16,32 +16,31 @@ const Apod = () => {
     });
   }, []);
   return (
-    <Box
-      sx={{
-        position: "fixed",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        textAlign: "center",
-        width: "min(90%, 60rem)",
-        display: "flex",
-        flexDirection: "column",
-        gap: "30px",
-        maxHeight: "80%",
-        overflowY: "auto",
-      }}
-    >
-      <Typography variant="h1" sx={{ color: colors.teal[200] }}>
-        Astronomy Picture of the Day
-      </Typography>
+    <Box>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "40px",
+          padding: "120px 0 60px",
+          width: "min(90%, 800px)",
+          marginInline: "auto",
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="h1" sx={{ color: colors.teal[200] }}>
+          Astronomy Picture of the Day
+        </Typography>
 
-      <Typography variant="h5">
-        {apod.title} - <i>{apod.date}</i>
-      </Typography>
-      <img src={apod.url} alt="APOD" />
-      <Typography variant="h4" sx={{}}>
-        {apod.explanation}
-      </Typography>
+        <img src={apod.url} alt="APOD" width="100%" />
+        <Typography variant="h5" sx={{ color: colors.lightBlue[200] }}>
+          {apod.title} - <i>{apod.date}</i>
+        </Typography>
+        <Typography variant="h4" sx={{ color: colors.teal[100] }}>
+          {apod.explanation}
+        </Typography>
+      </Box>
     </Box>
   );
 };
