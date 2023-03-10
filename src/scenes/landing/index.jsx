@@ -1,7 +1,7 @@
 import { Box, Button } from "@mui/material";
 import Video from "../../assets/earth.mp4";
 import Audio from "../../audio/interstellar.mp3";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const index = () => {
   return (
@@ -48,23 +48,25 @@ const index = () => {
           "I didn't feel like a giant. I felt very, very small"
         </p>
         <p style={{ fontSize: "20px" }}>- Neil Armstrong</p>
-
-        <Button
-          sx={{
-            fontSize: "14px",
-            fontWeight: "bold",
-            padding: "10px 20px",
-            color: "#fff",
-            backgroundColor: "rgba(22, 57, 94, .5)",
-          }}
-        >
-          Picture of the day
-        </Button>
+        <Link to="/apod">
+          <Button
+            sx={{
+              fontSize: "14px",
+              fontWeight: "bold",
+              padding: "10px 20px",
+              color: "#fff",
+              backgroundColor: "rgba(22, 57, 94, .5)",
+              textDecoration: "none",
+            }}
+          >
+            Picture of the day
+          </Button>
+        </Link>
       </Box>
       <Box position="absolute" bottom="0" margin="20px" right="0">
         <audio controls>
           <source src={Audio} type="audio/mpeg" />
-          Your browswer does not support the audio
+          Your browser does not support this audio
         </audio>
       </Box>
     </Box>
