@@ -12,7 +12,6 @@ const Apod = () => {
   useEffect(() => {
     HttpClient.getApod().then((apodData) => {
       setApod(apodData.data);
-      console.log(apodData.data);
     });
   }, []);
   return (

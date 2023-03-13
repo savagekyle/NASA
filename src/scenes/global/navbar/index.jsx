@@ -12,8 +12,8 @@ const Navbar = () => {
         position: "fixed",
         zIndex: "1",
         gap: "2rem",
-        left: "6%",
-        top: "6%",
+        left: "4%",
+        top: "4%",
       }}
     >
       <Link to="/images">
@@ -21,14 +21,9 @@ const Navbar = () => {
           NASA Images
         </Typography>
       </Link>
-      <Link to="/quote">
+      <Link to="/mars-weather">
         <Typography variant="h6" color="white">
-          Quote
-        </Typography>
-      </Link>
-      <Link to="/fact">
-        <Typography variant="h6" color="white">
-          Fact
+          Mars Weather
         </Typography>
       </Link>
       <Link to="/apod">
